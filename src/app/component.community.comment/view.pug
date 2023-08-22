@@ -1,0 +1,31 @@
+.input-group.mt-2.mb-2
+    textarea.form-control(
+        type="text",
+        placeholder="댓글을 입력해주세요",
+        rows=4, 
+        [(ngModel)]="comment.content",
+        (keydown.enter)="upload()")
+    button.btn((click)="upload()") 댓글달기
+.row
+    ul.list-group.card-list-group
+        li.list-group-item.p-2(*ngFor="let item of list")
+            .d-flex
+                .flex-fill.mt-1
+                    .comment-info
+                        small.float-end
+                            ng-container(*ngIf="login === item.user.id")
+                                button.btn.btn-sm.br-5.mr-2((click)="update(item)") 수정
+                                button.btn.btn-sm.br-5.mr-3((click)="remove(item.id)") 삭제
+                            span.text-muted {{item.created}}
+                        
+                    h4(style="margin-bottom: 10px;") {{item.user.name}}
+                        span.ml-2.text-muted.small {{item.user.mail}}
+                    div(*ngIf="item.status !== 'edit'", style="white-space: pre") {{item.content}}
+                    .input-group.mt-2.mb-2(*ngIf="item.status === 'edit'")
+                        textarea.form-control(
+                            type="text",
+                            placeholder="댓글을 입력해주세요", 
+                            rows=4,
+                            [(ngModel)]="item.content",
+                            (keydown.enter)="update(item)")
+                        button.btn((click)="update(item)") 수정

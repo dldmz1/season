@@ -1,0 +1,19 @@
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    transform: translate(-498px, 0%);
+    width: 500px;
+    height: 350px;
+
+    .list-group {
+        overflow: auto;
+
+        .list-group-item {
+            cursor: pointer;
+        }
+    }
+
+    .background-muted {
+        background-color: #E8E8F0;
+    }
+}

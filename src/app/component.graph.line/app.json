@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.graph.line",
+    "title": "graph - line",
+    "namespace": "graph.line",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.graph.line",
+        "name": "ComponentGraphLineComponent",
+        "path": "./component.graph.line/component.graph.line.component"
+    },
+    "ng": {
+        "selector": "wiz-component-graph-line",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-graph-line()"
+}

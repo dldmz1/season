@@ -1,0 +1,8 @@
+{
+    "mode": "sample",
+    "id": "page.board.list",
+    "title": "Board - list",
+    "namespace": "page.board.list",
+    "viewuri": "/community/board/list",
+    "category": ""
+}

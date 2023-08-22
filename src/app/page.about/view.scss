@@ -1,0 +1,57 @@
+* {
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+.season-page {
+    position: relative;
+}
+
+.header {
+    height: 598px;
+    padding-top: 300px;
+    padding-left: 60px;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(108deg, rgba(0, 0, 0, 0.5), transparent), url('/assets/season/about.png');
+
+    position: sticky;
+    top: 0;
+    border-radius: 30px;
+
+    h2 {
+        color: white;
+        font: normal normal bold 60px/75px Montserrat;
+        margin-bottom: 25px;
+    }
+
+    span {
+        color: white;
+        font: normal normal 400 20px/28px SUIT;
+    }
+}
+
+.content {
+    position: sticky;
+    top: 0;
+    padding: 55px 66px 120px 66px;
+    background-color: white;
+    border-radius: 30px;
+    margin-top: -60px;
+
+    h2 {
+        font: normal normal bold 60px/93px Montserrat;
+        margin-bottom: 60px;
+    }
+}
+
+.gray {
+    background-color: #E9E8EE !important;
+}
+
+// history
+.history {
+    border-top: 1px solid #9799A6;
+}

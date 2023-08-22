@@ -1,0 +1,19 @@
+@import "portal/season/core";
+// @import "styles/font/Montserrat";
+// @import "styles/font/SUIT";
+
+.ck-editor__editable {
+    min-height: 400px;
+}
+
+.data-content {
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+        border: none;
+    }
+    .ck.ck-editor__main>.ck-editor__editable {
+        background: none;
+    }
+    .ck-editor__editable {
+        min-height: auto;
+    }
+}

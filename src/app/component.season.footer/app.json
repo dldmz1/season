@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.season.footer",
+    "title": "Season - footer",
+    "namespace": "season.footer",
+    "viewuri": "",
+    "category": "season",
+    "ng.build": {
+        "id": "component.season.footer",
+        "name": "ComponentSeasonFooterComponent",
+        "path": "./component.season.footer/component.season.footer.component"
+    },
+    "ng": {
+        "selector": "wiz-component-season-footer",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-season-footer()"
+}

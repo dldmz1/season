@@ -1,0 +1,30 @@
+nav.navbar.navbar-expand-lg.bg-light
+    .container-fluid
+        .navbar-brand.mr-3(routerLink="/")
+            i.fa-solid.fa-cloud.fa-bounce
+            span WEB
+        
+        button.navbar-toggler(type="button", (click)="isMenuCollapsed = !isMenuCollapsed")
+            span.navbar-toggler-icon
+        
+        .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                    a.nav-link(routerLink="/career" routerLinkActive="active") 홈페이지
+                li.nav-item
+                    a.nav-link(routerLink="/dashboard" routerLinkActive="active") 대시보드
+                li.nav-item
+                    a.nav-link(routerLink="/community" routerLinkActive="active") 커뮤니티
+                
+            .d-flex
+                ng-container(*ngIf="!service.auth.session.name")
+                    a.btn.login(href="/login") 로그인
+                ng-container(*ngIf="service.auth.session.name")
+                    .notification.mr-3
+                        i.fa-regular.fa-bell((click)="display()")
+                        span.badge.bg-red(*ngIf="newNoti")
+                        ng-container(*ngIf="showNoti")
+                            wiz-component-card-notify
+                    span.mt-2.mr-3 {{username}} 님
+                    // a.btn.logout.mr-2(href="/mypage") 마이페이지
+                    a.btn.logout(href="/auth/logout") 로그아웃

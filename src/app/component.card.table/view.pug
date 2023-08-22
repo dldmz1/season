@@ -1,0 +1,43 @@
+.card.box-shadow
+    .card-header
+        .col
+            h3.mb-0 Table
+        .col-auto
+            button.btn.btn-primary(
+                *ngIf="mode !== 'create'",
+                (click)="mode = 'create'"
+            )
+                i.fa-solid.fa-plus
+                span.ml-2 Create
+    .card-body
+        .table-responsive
+            table.table.table-vcenter
+                thead
+                    tr
+                        th Name
+                        th Title
+                        th Email
+                        th Role
+                        th.w-1
+                tbody
+                    tr(*ngIf="mode == 'create'")
+                        td
+                            input.form-control([(ngModel)]="data.name")
+                        td
+                            input.form-control([(ngModel)]="data.title")
+                        td
+                            input.form-control([(ngModel)]="data.email")
+                        td
+                            select.form-select([(ngModel)]="data.role")
+                                option(value="User") 사용자
+                                option(value="Admin", disabled) 관리자
+                        td
+                            button.btn.btn-primary((click)="create()") Add
+                    
+                    tr(*ngFor="let item of user")
+                        td {{item.name}}
+                        td.text-muted {{item.title}}
+                        td.text-muted {{item.email}}
+                        td.text-muted {{item.role}}
+                        td
+                            span.text-blue.cursor-pointer((click)="edit()") Edit

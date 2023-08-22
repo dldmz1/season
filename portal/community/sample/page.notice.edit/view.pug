@@ -1,0 +1,42 @@
+.container.pt-4.pb-4.mt-3
+    .page-header.mb-3
+        .row.align-items-center
+            .col
+                .page-pretitle Community
+                h2.page-title 공지사항
+
+            .col-auto.ml-auto.d-print-none
+                .d-flex
+                    a.btn.ml-2.d-none.d-sm-inline-block(routerLink="/community/notice/list")
+                        i.fas.fa-list
+                        span.ml-2 목록
+
+                    a.btn.ml-2.d-none.d-sm-inline-block(*ngIf="post.id !== 'new'", routerLink="/community/notice/view/{{post.id}}")
+                        i.fas.fa-eye
+                        span.ml-2 게시글
+
+                    a.btn.ml-2.d-none.d-sm-inline-block((click)="update()")
+                        i.fas.fa-save
+                        span.ml-2 등록하기
+    
+    .info-form.row.first-child
+        .col-md-2
+            h4 제목
+        .col-md-8
+            input.form-control(
+                type="text", 
+                placeholder="50자 이내 입력 가능", 
+                maxlength='50',
+                [(ngModel)]="post.title"
+            )
+        .col-md-2
+            select.form-select([(ngModel)]="post.priority")
+                option(value='0') 일반
+                option(value='1') 필독
+        
+    .editor-area.mt-4.mb-4
+        textarea#editor([(ngModel)]="post.content") {{post.content}}
+        
+    .text-right
+        button.btn.btn-border.pr-4.pl-4.ml-1(*ngIf="post.id !== 'new'", (click)="remove()") 삭제
+        button.btn.pr-4.pl-4.ml-1(*ngIf="post.id !== 'new'", (click)="update()") 저장

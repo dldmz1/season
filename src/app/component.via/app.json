@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.via",
+    "title": "via",
+    "namespace": "via",
+    "viewuri": "/via",
+    "category": "",
+    "ng.build": {
+        "id": "component.via",
+        "name": "ComponentViaComponent",
+        "path": "./component.via/component.via.component"
+    },
+    "ng": {
+        "selector": "wiz-component-via",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-via()"
+}

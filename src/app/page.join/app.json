@@ -1,0 +1,22 @@
+{
+    "mode": "page",
+    "id": "page.join",
+    "title": "/join",
+    "namespace": "join",
+    "viewuri": "/join",
+    "category": "",
+    "preview": "/join",
+    "ng.build": {
+        "id": "page.join",
+        "name": "PageJoinComponent",
+        "path": "./page.join/page.join.component"
+    },
+    "ng": {
+        "selector": "wiz-page-join",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-join()",
+    "controller": "base",
+    "layout": "layout.navbar"
+}

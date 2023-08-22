@@ -1,0 +1,18 @@
+.dropdown-menu.dropdown-menu-arrow.dropdown-menu-end.dropdown-menu-card.show
+    .card
+        .card-header
+            .col
+                h3.card-title Last updates
+
+        .list-group
+            .list-group-item.d-flex(
+                *ngFor="let item of list; let i = index;",
+                [ngClass]="item.show ? 'background-muted' : ''",
+                (click)="show(i)"
+            )
+                .col
+                    .row
+                        strong.col([ngClass]="item.show ? 'text-muted' : ''") {{item.title}}
+                        span.col-auto.text-muted {{item.date}}
+                    .row
+                        span.col([ngClass]="item.show ? 'text-muted' : ''") {{item.content}}

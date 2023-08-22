@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.community",
+    "title": "/community",
+    "namespace": "community",
+    "viewuri": "/community",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.navbar",
+    "ng.build": {
+        "id": "page.community",
+        "name": "PageCommunityComponent",
+        "path": "./page.community/page.community.component"
+    },
+    "ng": {
+        "selector": "wiz-page-community",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-community()"
+}

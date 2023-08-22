@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.card.table",
+    "title": "card - table",
+    "namespace": "card.table",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.card.table",
+        "name": "ComponentCardTableComponent",
+        "path": "./component.card.table/component.card.table.component"
+    },
+    "ng": {
+        "selector": "wiz-component-card-table",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-card-table()"
+}

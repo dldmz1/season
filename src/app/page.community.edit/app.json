@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.community.edit",
+    "title": "/community/edit",
+    "namespace": "community.edit",
+    "viewuri": "/community/edit/:id",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.navbar",
+    "ng.build": {
+        "id": "page.community.edit",
+        "name": "PageCommunityEditComponent",
+        "path": "./page.community.edit/page.community.edit.component"
+    },
+    "ng": {
+        "selector": "wiz-page-community-edit",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-community-edit()"
+}

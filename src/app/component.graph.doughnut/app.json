@@ -1,0 +1,20 @@
+{
+    "mode": "component",
+    "id": "component.graph.doughnut",
+    "title": "graph - doughnut",
+    "namespace": "graph.doughnut",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "ng.build": {
+        "id": "component.graph.doughnut",
+        "name": "ComponentGraphDoughnutComponent",
+        "path": "./component.graph.doughnut/component.graph.doughnut.component"
+    },
+    "ng": {
+        "selector": "wiz-component-graph-doughnut",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-graph-doughnut()"
+}

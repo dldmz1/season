@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    // color: #AAC4FF;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    i {
+        font-size: 20px;
+    }
+
+    .badge {
+        transform: translate(0%, -100%);
+    }
+}

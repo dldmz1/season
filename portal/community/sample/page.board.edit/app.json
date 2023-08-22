@@ -1,0 +1,8 @@
+{
+    "mode": "sample",
+    "id": "page.board.edit",
+    "title": "Board - edit",
+    "namespace": "page.board.edit",
+    "viewuri": "/community/board/edit/:id",
+    "category": ""
+}

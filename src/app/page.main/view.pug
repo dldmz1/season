@@ -1,0 +1,6 @@
+wiz-component-kmbig-nav()
+// wiz-component-via
+
+.row(style="margin-top: 410px;")
+    .col-4.p-2(*ngFor="let item of card")
+        wiz-component-card([title]="item.title", [text]="item.text", [src]="item.src")

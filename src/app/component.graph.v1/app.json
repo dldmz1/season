@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.graph.v1",
+    "title": "graph - v1",
+    "namespace": "graph.v1",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.graph.v1",
+        "name": "ComponentGraphV1Component",
+        "path": "./component.graph.v1/component.graph.v1.component"
+    },
+    "ng": {
+        "selector": "wiz-component-graph-v1",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-graph-v1()"
+}

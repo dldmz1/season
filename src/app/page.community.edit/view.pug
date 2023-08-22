@@ -1,0 +1,51 @@
+.container.pt-4.pb-4.mt-3
+    .page-header.mb-3
+        .row.align-items-center
+            .col
+                .page-pretitle Community
+                h2.page-title 게시판
+
+            .col-auto.ml-auto.d-print-none
+                .d-flex
+                    a.btn.ml-2.d-none.d-sm-inline-block(routerLink="/community")
+                        i.fas.fa-list
+                        span.ml-2 목록
+
+                    a.btn.ml-2.d-none.d-sm-inline-block(*ngIf="post.id !== 'new'", routerLink="/community/view/{{post.id}}")
+                        i.fas.fa-eye
+                        span.ml-2 게시글
+
+                    a.btn.ml-2.d-none.d-sm-inline-block(*ngIf="post.id === 'new'", (click)="update()")
+                        i.fas.fa-save
+                        span.ml-2 등록하기
+    
+    .info-form.row.first-child
+        .col-2
+            h4 제목
+        .col-8
+            input.form-control(
+                type="text", 
+                placeholder="50자 이내 입력 가능", 
+                maxlength="50",
+                [(ngModel)]="post.title"
+            )
+        .col-2
+            select.form-select([(ngModel)]="post.priority")
+                option(value="0") 일반
+                option(value="1") 필독
+    .info-form.row
+        .col-2
+            h4 첨부파일
+        .col-8
+            form#file
+                input#file-upload.form-control(type="file", name="file[]", multiple)
+        .col-2
+            button.btn.btn-square.btn-block((click)="upload()") 업로드
+        
+    .editor-area.mt-4
+        textarea("#editor"="", rows=3)
+    
+    .last-child.mt-3
+        .text-right.mt-3
+            button.btn.btn-border.pr-4.pl-4.ml-1(*ngIf="post.id !== 'new'", (click)="remove()") 삭제
+            button.btn.pr-4.pl-4.ml-1(*ngIf="post.id !== 'new'", (click)="update()") 저장

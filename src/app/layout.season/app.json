@@ -1,0 +1,20 @@
+{
+    "mode": "layout",
+    "id": "layout.season",
+    "title": "season",
+    "namespace": "season",
+    "viewuri": "",
+    "category": "season",
+    "controller": "base",
+    "ng.build": {
+        "id": "layout.season",
+        "name": "LayoutSeasonComponent",
+        "path": "./layout.season/layout.season.component"
+    },
+    "ng": {
+        "selector": "wiz-layout-season",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-layout-season()"
+}

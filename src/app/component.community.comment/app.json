@@ -1,0 +1,20 @@
+{
+    "mode": "component",
+    "id": "component.community.comment",
+    "title": "Community - comment",
+    "namespace": "community.comment",
+    "viewuri": "",
+    "category": "",
+    "controller": "base",
+    "ng.build": {
+        "id": "component.community.comment",
+        "name": "ComponentCommunityCommentComponent",
+        "path": "./component.community.comment/component.community.comment.component"
+    },
+    "ng": {
+        "selector": "wiz-component-community-comment",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-community-comment()"
+}

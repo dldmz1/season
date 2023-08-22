@@ -1,0 +1,43 @@
+.container.pt-4.pb-4.mt-3
+    .page-header
+        .row.align-items-center
+            .col
+                .page-pretitle Community
+                h2.page-title 자유게시판
+
+            .col-auto.ml-auto.d-print-none
+                .search.d-flex(style="width: 280px;")
+                    input.form-control.d-flex(
+                        type="text", 
+                        placeholder="검색", 
+                        [(ngModel)]="text", 
+                        (keydown.enter)="search()"
+                    )
+                    button.btn.btn-search((click)="search()")
+                        i.fas.fa-search
+
+            .col-auto
+                a.btn.btn-light.d-sm-inline-block.w-auto.font-weight-bold(routerLink="/community/board/edit/new") 글쓰기
+                    i.ml-2.fas.fa-plus
+
+    .overflow-x.mt-3
+        table.table.table-hover.board-table.box-shadow
+            thead
+                tr
+                    th.text-center.col-1.btlr 번호
+                    th.text-center.col 제목
+                    th.text-center.col-1 작성자
+                    th.text-center.col-2 수정일
+                    th.text-center.col-2.btrr 등록일
+
+            tbody
+                tr(*ngIf="!list")
+                    td.p-6.text-center(colspan=6) 게시글이 없습니다.
+                tr.cursor-pointer(*ngFor="let item of list;", (click)="show(item.id)")
+                    td.text-center
+                        span(*ngIf="item.priority == 0") {{item.id}}
+                        span(*ngIf="item.priority == 1") 필독
+                    td {{item.title.length == 0 ? "제목없음" : item.title}}
+                    td.text-center {{item.user}}
+                    td.text-center {{item.updated.substr(0,10)}}
+                    td.text-center {{item.created.substr(0,10)}}

@@ -1,0 +1,8 @@
+{
+    "mode": "sample",
+    "id": "page.notice.edit",
+    "title": "Notice - edit",
+    "namespace": "page.notice.edit",
+    "viewuri": "/community/notice/edit/:id",
+    "category": ""
+}

@@ -1,0 +1,7 @@
+{
+    "package": "community",
+    "title": "Community",
+    "version": "1.0.0",
+    "use_sample": true,
+    "use_model": true
+}

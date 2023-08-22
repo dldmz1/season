@@ -1,0 +1,67 @@
+.container.pt-4.pb-4.mt-3
+    .login-view
+        .div
+            .container
+                .logo(routerLink="/auth/login")
+                    i.fa-solid.fa-cloud
+                
+                .card.join-card.mt-4(*ngIf="step == 0")
+                    .card-body.py-5
+                        .form-group.mb-3
+
+                            .text-center
+                                button.btn.btn-join.btn-block((click)="move()")
+                                    span 다음으로
+                                    i.fa-solid.fa-arrow-right.ml-2
+
+                .card.join-card.mt-4(*ngIf="step == 1")
+                    .card-body.py-5
+                        .form-group
+                            .login-heading.d-flex
+                                .login-form-icon
+                                    i.mr-2.fa-solid.fa-user
+                                .text-muted
+                                    span 회원가입을 위해 이용자의 개인정보를 입력해주세요.
+
+                            .underline-text-onlyform-input-group.mb-3
+                                input#id.underline-text-input-field(
+                                    type="id", 
+                                    placeholder="아이디를 입력하세요.", 
+                                    autocomplete="off",
+                                    [(ngModel)]="userdata.id")
+                                label.underline-text-input-label 아이디*
+
+                            .underline-text-onlyform-input-group.mb-3
+                                input#password.underline-text-input-field(
+                                    type="password", 
+                                    placeholder="8-16자 영문 및 숫자를 입력하세요.", 
+                                    autocomplete="off",
+                                    [(ngModel)]="userdata.password")
+                                label.underline-text-input-label 비밀번호*
+
+                            .underline-text-onlyform-input-group.mb-3
+                                input#pw_rp.underline-text-input-field(
+                                    type="password", 
+                                    placeholder="비밀번호를 다시 입력하세요.", 
+                                    autocomplete="off",
+                                    [(ngModel)]="userdata.password_repeat")
+                                label.underline-text-input-label 비밀번호 확인*
+
+                            .underline-text-onlyform-input-group.mb-3
+                                input#name.underline-text-input-field(
+                                    type="text", 
+                                    placeholder="이름을 입력하세요.", 
+                                    autocomplete="off",
+                                    [(ngModel)]="userdata.name")
+                                label.underline-text-input-label 이름
+
+                            .underline-text-onlyform-input-group.mb-3
+                                input#mail.underline-text-input-field(
+                                    type="email",  
+                                    placeholder="이메일을 입력하세요.",
+                                    autocomplete="off",
+                                    [(ngModel)]="userdata.mail")
+                                label.underline-text-input-label 이메일*
+
+                            .text-center
+                                button.btn.btn-join.btn-block((click)="join()") 설정하기

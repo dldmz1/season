@@ -1,0 +1,8 @@
+{
+    "mode": "sample",
+    "id": "page.notice.view",
+    "title": "Notice - view",
+    "namespace": "page.notice.view",
+    "viewuri": "/community/notice/view/:id",
+    "category": ""
+}

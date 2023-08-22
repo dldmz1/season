@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.graph.bar",
+    "title": "graph - bar",
+    "namespace": "graph.bar",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.graph.bar",
+        "name": "ComponentGraphBarComponent",
+        "path": "./component.graph.bar/component.graph.bar.component"
+    },
+    "ng": {
+        "selector": "wiz-component-graph-bar",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-graph-bar()"
+}
